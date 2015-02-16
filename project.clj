@@ -8,10 +8,10 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.freemarker/freemarker "2.3.18"]
                  [org.slf4j/slf4j-log4j12 "1.7.10"]
-                 [net.logstash.log4j/jsonevent-layout "1.7"]
-                 [com.amazonaws/aws-java-sdk-swf-libraries "1.9.16"]
-                 [com.amazonaws/aws-java-sdk-simpleworkflow "1.9.16"]
-                 [com.amazonaws/aws-java-sdk-flow-build-tools "1.9.16"]
+                 [joda-time/joda-time "2.3"]
+                 [com.amazonaws/aws-java-sdk-swf-libraries "1.9.16" :exclusions [joda-time]]
+                 [com.amazonaws/aws-java-sdk-simpleworkflow "1.9.16" :exclusions [joda-time]]
+                 [com.amazonaws/aws-java-sdk-flow-build-tools "1.9.16" :exclusions [joda-time]]
                  [log4j/log4j "1.2.17" :exclusions [javax.mail/mail
                                                     javax.jms/jms
                                                     com.sun.jmdk/jmxtools
