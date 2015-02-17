@@ -1,5 +1,5 @@
 (ns cljflow.implementations
-  (:import [cljflow.helloworld GreeterActivities])
+  (:import [cljflow.helloworld GreeterActivities GreeterActivitiesClientImpl])
   (:gen-class
     :name cljflow.implementations.GreeterWorkflowImpl
     :implements [cljflow.helloworld.GreeterWorkflow]
@@ -11,7 +11,7 @@
     (getGreeting [this name] (str "Hello " name "!"))
     (say [this what] (println what))))
 
-(def operations (greeter-activities-impl))
+(def operations (GreeterActivitiesClientImpl.))
 
 (defn wf-greet [this]
   (let [name (.getName operations)
