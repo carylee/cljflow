@@ -19,5 +19,4 @@
   :main ^:skip-aot cljflow.core
   :target-path "target/%s"
   :repositories {"maven" {:url "http://repo1.maven.org/maven2"}}
-  :aot [cljflow.implementations]
   :profiles {:uberjar {:aot :all}})
